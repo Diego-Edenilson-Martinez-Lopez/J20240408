@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\J20240408.EntidadesDeNegocio\J20240408.EntidadesDeNegocio.csproj" />
+    <ProjectReference Include="..\J20240408.LogicaDeNegocio\J20240408.LogicaDeNegocio.csproj" />
+  </ItemGroup>
+
 </Project>
