@@ -10,7 +10,7 @@ namespace J20240408.AccesoADatos
         {
             services.AddDbContext<AppDbContext>(options =>
              options.UseSqlServer(configuration.GetConnectionString("conn")));
-            services.AddScoped<PersonaJ>();
+            services.AddScoped<PersonaJDAL>();
 
             return services;
         }

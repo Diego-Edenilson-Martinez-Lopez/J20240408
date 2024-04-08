@@ -1,0 +1,62 @@
+﻿@model J20240408.EntidadesDeNegocio.PersonaJ
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PersonaJ</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreJ" class="control-label"></label>
+                <input asp-for="NombreJ" class="form-control" />
+                <span asp-validation-for="NombreJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApellidoJ" class="control-label"></label>
+                <input asp-for="ApellidoJ" class="form-control" />
+                <span asp-validation-for="ApellidoJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechadeNacimientoJ" class="control-label"></label>
+                <input asp-for="FechadeNacimientoJ" class="form-control" />
+                <span asp-validation-for="FechadeNacimientoJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SueldoJ" class="control-label"></label>
+                <input asp-for="SueldoJ" class="form-control" />
+                <span asp-validation-for="SueldoJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estatus" class="control-label"></label>                
+                <select name="Estatus" class="form-control">
+                    <option value="0">Seleccionar</option>
+                    <option value="1">Activo</option>
+                    <option value="2">Inactivo</option>
+                </select>
+                <span asp-validation-for="Estatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

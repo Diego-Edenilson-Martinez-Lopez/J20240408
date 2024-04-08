@@ -1,7 +1,12 @@
+using J20240408.LogicaDeNegocio;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddBLDependecies(builder.Configuration);
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
